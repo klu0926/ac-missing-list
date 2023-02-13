@@ -1,6 +1,6 @@
 # Missing List
-This is for personal educational use only.
-A fictional missing person site, created with the help of [Random User Generator](https://randomuser.me/)
+This is for personal educational use only. <br>
+A fictional missing person site, created with the help of [Random User Generator](https://randomuser.me/).<br>
 click [Github Page](https://klu0926.github.io/ac-missing-list/) here
 
 ## Screenshot

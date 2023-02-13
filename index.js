@@ -106,26 +106,26 @@ const model = {
       reward += 3000
     } else if (age > 51 && age <= 61) {
       reward += 1000
-    } else if (age > 61){
+    } else if (age > 61) {
       reward += 100
     }
     return reward
   },
 
-  addRewardToData(){
+  addRewardToData() {
     this.data.forEach(person => {
       person.reward = this.generateReward(person)
     })
   },
 
-  overrideLocalStorage(){
+  overrideLocalStorage() {
     const newData = JSON.stringify(this.lookoutData)
     localStorage.setItem("lookout", newData)
-  }, 
+  },
 
-  loadLocalStorage(){
-    const storageData =  JSON.parse(localStorage.getItem("lookout"))
-    if (!storageData || storageData.length === 0){
+  loadLocalStorage() {
+    const storageData = JSON.parse(localStorage.getItem("lookout"))
+    if (!storageData || storageData.length === 0) {
       return
     } else {
       this.lookoutData = storageData
@@ -232,7 +232,7 @@ const view = {
     const pageAmount = Math.ceil(amount / itemPerPage)
     pagination.innerHTML = ""
 
-    if (pageAmount < 2) return 
+    if (pageAmount < 2) return
 
     for (let i = 1; i <= pageAmount; i++) {
       const raw = `
@@ -243,10 +243,10 @@ const view = {
     this.highlightCurrentPagination()
   },
   // this call after renderPagination()
-  highlightCurrentPagination(){
+  highlightCurrentPagination() {
     const links = document.querySelectorAll(".page-item")
     links.forEach(link => {
-      if (link.innerText === currentPage.toString()){
+      if (link.innerText === currentPage.toString()) {
         link.classList.add("active")
       } else {
         link.classList.remove("active")
@@ -340,10 +340,10 @@ const control = {
       view.renderLookoutNumber(model.lookoutData.length)
     }
   },
-  onPaginationClick(event){
+  onPaginationClick(event) {
     event.preventDefault()
     const target = event.target
-    if (target.matches(".page-link")){
+    if (target.matches(".page-link")) {
       const page = target.innerText;
       currentPage = page
       control.renderPage(page, model.data);

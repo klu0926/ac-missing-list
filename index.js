@@ -7,12 +7,12 @@
 
 
 // API
-const amount = 100
+const amount = 200
 const seeds = "lulu"
 const API = `https://randomuser.me/api/?results=${amount}&seed=${seeds}`
 
 // Setup
-let itemPerPage = 20
+let itemPerPage = 40
 let currentPage = 1
 
 // Panel

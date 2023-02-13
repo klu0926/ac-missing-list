@@ -1,0 +1,137 @@
+.test {
+  border: 2px solid red;
+}
+
+body {
+  background-color: black;
+}
+
+.text-white {
+  color: white;
+}
+
+.small-text {
+  font-size: 15px;
+}
+
+/* page links */
+.nav-link {
+  margin: 0;
+  margin-left: 15px;
+  padding: 0;
+  text-decoration: none;
+  color:black;
+}
+.nav-link:hover{
+  color: white;
+}
+
+.nav-active{
+  color: white;
+  font-weight: bold;
+}
+
+
+/* search logo */
+.search-logo {
+  cursor: default;
+  text-decoration: none;
+  color: black;
+  transition: color 1s ease-in-out;
+}
+.search-logo:hover{
+  color: black
+}
+
+.search-logo-light {
+  color: white;
+  transition: color 2s ease-in-out;
+}
+
+/* card */
+.card {
+  width: 140px;
+  height: 200px;
+  background-color: transparent;
+}
+
+.card .img-container {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  border: 2px solid rgb(82, 82, 82);
+  border-radius: 5px;
+}
+
+.card:hover .img-container {
+  border-color: white;
+}
+
+.card .card-img-blur {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 140%;
+  filter: blur(5px) grayscale();
+  transition: filter 0.5s;
+}
+
+.card:hover .card-img-blur {
+  filter: blur(0) grayscale(20%);
+}
+.card .card-p-blur {
+  color: transparent;
+  text-shadow: 0 0 8px white;
+}
+
+.card:hover .card-p-blur {
+  color: white;
+  text-shadow: none;
+  transition: text-shadow color 3s ease;
+}
+
+.card .on-lookout-img {
+  filter: blur(0) grayscale(20%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 140%;
+  color: white;
+}
+
+.card .on-lookout-name {
+  color: white;
+  text-shadow: none;
+}
+
+
+/* modal */
+#modal h5 {
+  font-weight: bold;
+}
+
+#modal td {
+  font-weight: bold;
+}
+
+#modal p,
+#modal span {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+
+/* pagination */
+.pagination .page-link {
+ background-color: rgb(55, 55, 55);
+ border: 1px solid rgb(76, 75, 75);
+ color : gray;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: red;
+  border: 1px solid black;
+}
